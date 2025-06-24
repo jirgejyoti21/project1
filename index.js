@@ -87,7 +87,7 @@ const getCityCoordinates = () => {
     if (!cityName) return; //Return if cityName is empty
 
     // Use backticks and correct string interpolation for the API key
-    const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
     //Get entered city coordinaes(latitude,longitude,and name)from API response
     fetch(GEOCODING_API_URL)
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
      navigator.geolocation.getCurrentPosition(
 		position => {
 		const { latitude, longitude } = position.coords;
-			const REVERSE_GEOCODING_URL=`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
+			const REVERSE_GEOCODING_URL=`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
             //Get city name from coordinates using reverse geocoding API 
 			fetch(REVERSE_GEOCODING_URL)
         .then(res => {

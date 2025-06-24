@@ -7,11 +7,13 @@ font-family:'Open Sans',sans-serif;
 body{
 	background:#E3F2FD;
 }
+
 h1{
 	background:#5372F0;
 	font-size:1.75rem;
 	color:#fff;
 	padding:18px 0;
+	margin:auto;
 	text-align:center;
 }
 
@@ -19,6 +21,8 @@ h1{
 	display:flex;
 	gap:35px;
 	padding:30px;
+	width:100%;
+	max-width:1200px;
 }
 .weather-input{
 	width:550px;
@@ -97,9 +101,20 @@ background:#6C757D;
 	font-size:1.5rem;
 	margin:20px 0;
 }
+.card {
+  flex: 1 1 200px; /* flexible card size */
+  max-width: 250px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .weather-cards{
 	display:flex;
 	gap:20px;
+	 flex-wrap: wrap;
+        justify-content: center;
 }
 .weather-cards .card{
 	list-style:none;
@@ -145,4 +160,13 @@ width:450px;
 	.weather-input{
 		width:100%;
 	}
+}
+@media (max-width: 768px) {
+  .weather-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 90%;
+  }
 }

@@ -32,7 +32,7 @@ const createWeatherCard = (weatherItem, cityName, index) => {
 
 const getWeatherDetails = (cityName, lat, lon) => {
     // Use backticks and correct string interpolation for the API key
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     // Clear previous weather data
     currentWeatherDiv.innerHTML = "";

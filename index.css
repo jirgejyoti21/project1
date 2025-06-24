@@ -7,10 +7,15 @@ font-family:'Open Sans',sans-serif;
 body{
 	background:#E3F2FD;
 }
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
 
 h1{
 	background:#5372F0;
-	font-size:1.75rem;
+	font-size:2rem;
 	color:#fff;
 	padding:18px 0;
 	margin:auto;
